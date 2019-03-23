@@ -18,32 +18,20 @@ function root(a,b){
 }
 
 
-var result = document.getElementById('result')
-//Calculate
-document.getElementById('button').onclick = function() {
-    //Get selected operation
-    operator = document.querySelector('.operation:checked').value;
-    var a = Number(document.getElementById('a').value);
-    var b = Number(document.getElementById('b').value);
-    
-    switch(operator){
-        case "plus":
-            result.value = plus(a,b)
-            break;
-        case "minus":
-            result.value = minus(a,b)
-            break;
-        case "by":
-            result.value = by(a,b)
-            break;
-        case "divide":
-            result.value = divide(a,b)
-            break;
-    
-        }
-    //Assign result to a and clean b
-    document.getElementById('a').value = result.value;
-    document.getElementById('b').value = "";
 
+
+function operator(button){
+    var val = button.id;
+    var a = document.getElementById('a').value;
+    var current = document.getElementById('current').value;
+    document.getElementById('current').value = current + a + val;
+
+}
+
+// //Calculate
+document.getElementById('button').onclick = function() {
+    var calc = document.getElementById('current').value;
+    document.getElementById('result').value = eval(calc);
+    
 };
 

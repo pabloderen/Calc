@@ -5,17 +5,22 @@
 <h2>Calculator</h2>
 
 <form>
+  Current:<br>
+    <input type="text" id="current">
+    <br>
   A:<br>
   <input type="number" id="a">
   <br>
   
-  <input class= "operation" type="radio" name="operation" value="plus" checked> +<br>
+  <!-- <input class= "operation" type="radio" name="operation" value="plus" checked> +<br>
   <input  class= "operation" type="radio" name="operation" value="minus"> -<br>
   <input  class= "operation"  type="radio" name="operation" value="by"> x<br>
-  <input  class= "operation"  type="radio" name="operation" value="divide"> /<br>
-  B:<br>
-  <input type="number" id="b">
-  <br>
+  <input  class= "operation"  type="radio" name="operation" value="divide"> /<br> -->
+  <button  type="button" onclick="operator(this)" id="+">+</button>
+  <button  type="button" onclick="operator(this)" id="-">-</button>
+  <button  type="button" onclick="operator(this)" id="*">*</button>
+  <button  type="button" onclick="operator(this)" id="/">/</button>
+  <br><br>
   <input type="button" value="=" id="button" name="button" />
   <br>
   Result:<br>
